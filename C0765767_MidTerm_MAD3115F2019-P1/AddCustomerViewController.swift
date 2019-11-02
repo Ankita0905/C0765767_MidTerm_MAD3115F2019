@@ -47,7 +47,7 @@ class AddCustomerViewController: UIViewController {
                    
                    let alert = UIAlertController(title: "Success", message: "Congrats! Added Successfully", preferredStyle: .alert)
 
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in self.navigationController?.pushViewController(customerListVC, animated: true)}))
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in self.navigationController?.popViewController(animated: true)}))
                    
                 
                    self.present(alert, animated: true)
