@@ -31,7 +31,8 @@ class AddCustomerViewController: UIViewController {
         //print("Customer Added")
      let sb1=UIStoryboard(name: "Main", bundle: nil)
      let customerListVC=sb1.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
-        navigationController?.popViewController(animated: true)
+      //  navigationController?.pushViewController(customerListVC, animated: true)
+       // navigationController?.popViewController(animated: true)
 
     
     
@@ -46,8 +47,9 @@ class AddCustomerViewController: UIViewController {
                    
                    let alert = UIAlertController(title: "Success", message: "Congrats! Added Successfully", preferredStyle: .alert)
 
-                   alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in self.navigationController?.pushViewController(customerListVC, animated: true)}))
                    
+                
                    self.present(alert, animated: true)
                }
                else{
@@ -59,6 +61,7 @@ class AddCustomerViewController: UIViewController {
                    self.present(alert, animated: true)
                    
                }
+        
     }
     
     

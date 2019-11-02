@@ -159,7 +159,6 @@
         <!--Add Customer View Controller-->
         <scene sceneID="5wR-3h-Op8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xXw-aB-uw7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="addCustomerVC" id="qbI-ua-U29" customClass="AddCustomerViewController" customModule="C0765767_MidTerm_MAD3115F2019_P1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bmV-Q1-mjR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -238,6 +237,7 @@
                         <outlet property="txtLastName" destination="q7H-hs-3cV" id="ery-x4-lJg"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xXw-aB-uw7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2640.579710144928" y="114.50892857142857"/>
         </scene>
