@@ -57,7 +57,7 @@ class CustomerListViewController: UIViewController,UITableViewDelegate,UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          let sb1=UIStoryboard(name: "Main", bundle: nil)
                let detailsVC=sb1.instantiateViewController(identifier: "detailsVC") as! CustomerDetailsViewController
-        detailsVC.cutdetails=tempvar.returnCustObject(custID: indexPath.row+1)!
+        detailsVC.custdetails=tempvar.returnCustObject(custID: indexPath.row+1)!
                navigationController?.pushViewController(detailsVC, animated: true)
     }
     
