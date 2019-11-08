@@ -57,9 +57,7 @@ class AddBillViewController: UIViewController {
     @objc func saveBill(sender: UIBarButtonItem)
     {
     
-        let idRandom = Int.random(in: 0..<10000)
-        let passBill = Mobile(Id: idRandom, billDate: datePicker.date, billType: billTypes.Mobile, totalBillAmount: (self.txtTotalAmount?.text! as! NSString).floatValue, mobileManufacturer: "Samsung", planName: "Data + Text", mobileNumber: "9090909090", internetUsed: 3 , minuteUsed: 343)
-        let convertBill = passBill as Bill
+
        
         self.navigationController?.popViewController(animated: true)
     }
@@ -81,14 +79,6 @@ class AddBillViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

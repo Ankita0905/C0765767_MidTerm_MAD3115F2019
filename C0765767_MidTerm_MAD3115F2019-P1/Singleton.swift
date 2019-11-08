@@ -75,19 +75,16 @@ class Singleton: NSObject
         c2.addBill(Bill: b2)
         c2.addBill(Bill: b6)
         
-        let c3=Customer(customerID: 3, customerFName: "Karan", customerLName: "Kumar", customerEmail: "karan@gmail.com")
+    
+        let c3 = Customer(customerID: 3, customerFName: "Karan", customerLName: "Kumar", customerEmail: "karan321@gmail.com ")
         AddCustomer(customer: c3)
+
+        
+        c3.addBill(Bill: b6)
+        let c4 = Customer(customerID: 4, customerFName: "Sandeep", customerLName: "Singh", customerEmail: "sandeep@gmail.com ")
+        AddCustomer(customer: c4)
         c3.addBill(Bill: b2)
-        
-        
-//        let c3 = Customer(customerID: 3, customerFName: "Karan", customerLName: "Kumar", customerEmail: "karan321@gmail.com ")
-//        AddCustomer(customer: c3)
-//
-//        c3.addBill(Bill: b2)
-//        c3.addBill(Bill: b6)
-//        let c4 = Customer(customerID: 4, customerFName: "Sandeep", customerLName: "Singh", customerEmail: "sandeep@gmail.com ")
-//        AddCustomer(customer: c4)
-//        c4.addBill(Bill: b5)
+        c4.addBill(Bill: b5)
         
         
         

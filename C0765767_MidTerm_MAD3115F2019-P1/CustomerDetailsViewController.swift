@@ -37,29 +37,34 @@ class CustomerDetailsViewController: UIViewController ,UITableViewDelegate,UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: "mycell")!
         let currentbill = custdetails?.billDictionary[indexPath.row + 1]
         var details = ""
-        if currentbill?.billType == billTypes.Mobile{
+//        if currentbill?.billType == billTypes.Mobile{
+//            cell.textLabel?.numberOfLines = 12
+//
+            
+            if currentbill?.billType == billTypes.Mobile{
             cell.textLabel?.numberOfLines = 12
             let mobileBill = currentbill as! Mobile
             details = "\nBill Type : Mobile \nManufacturer Name : \(mobileBill.mobileManufacturer) \nPlan Name : \(mobileBill.planName) \nMobile Number : \(mobileBill.mobileNumber) \nInternet used : \(mobileBill.internetUsed.data()) \nMinutes Used : \(mobileBill.minuteUsed.minutes()) "
-        } else {
-            if currentbill?.billType == billTypes.Hydro{
+        }
+            else if currentbill?.billType == billTypes.Hydro{
                 cell.textLabel?.numberOfLines = 12
                 let hydroBill = currentbill as! Hydro
                 details = "\nBill Type : Hydro \nAgency Name : \(hydroBill.agencyName) \nUnit Consumed : \(hydroBill.unitconsumed.unit())"
-            } else {
-                if currentbill?.billType == billTypes.Internet{
+            }
+            else if currentbill?.billType == billTypes.Internet{
                     cell.textLabel?.numberOfLines = 12
                     let internetBill = currentbill as! Internet
                     details = "\nBill Type : Internet \nProvider Name : \(internetBill.providerName) \nInternet Used : \(internetBill.internetUsed.data())"
                 }
-            }
-        }
+            
+        
         
         //print("HEllpo","Bill ID : \(String(describing: currentbill!.Id)) \nBill Date : \(String(describing: currentbill!.billDate.getForamttedDate())) \nBill Total : \(String(describing: currentbill!.totalBillAmount.currency())) \(details)")
         cell.textLabel?.text = "Bill ID : \(String(describing: currentbill!.Id)) \nBill Date : \(String(describing: currentbill!.billDate.getForamttedDate())) \nBill Total : \(String(describing: currentbill!.totalBillAmount.currency())) \(details)"
         return cell
         
        }
+    
     @objc func goToAddBill(){
     self.performSegue(withIdentifier: "goToAddNewBill", sender: nil)
     }

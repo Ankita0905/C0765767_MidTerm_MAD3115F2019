@@ -16,6 +16,8 @@ class Customer
     var fullName : String{
         return customerFName! + " " + customerLName!
     }
+    
+    
       var customerEmail: String?
     
   
